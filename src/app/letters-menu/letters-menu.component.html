@@ -1,0 +1,7 @@
+<div #menu class="menu shadow-lg" [style.left.px]="realX" [style.top.px]="realY">
+  <button [ngClass]="{'btn-outline-secondary': !shiftEnabled, 'btn-secondary': shiftEnabled}" class="shift-button btn shadow-sm" (click)="onShiftButtonClicked()">Shift</button>
+  <button class="letter-button btn btn-outline-secondary shadow-sm" (click)="onLetterButtonClicked($event, getA())">{{getA()}}</button>
+  <button class="letter-button btn btn-outline-secondary shadow-sm" (click)="onLetterButtonClicked($event, getO())">{{getO()}}</button>
+  <button class="letter-button btn btn-outline-secondary shadow-sm" (click)="onLetterButtonClicked($event, getU())">{{getU()}}</button>
+  <button class="letter-button btn btn-outline-secondary shadow-sm" (click)="onLetterButtonClicked($event, getS())">{{getS()}}</button>
+</div>

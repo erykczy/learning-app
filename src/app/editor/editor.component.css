@@ -1,0 +1,25 @@
+.items-container {
+  background-color: rgb(240, 240, 240);
+}
+.item {
+  background-color: white;
+}
+.move-handle {
+  cursor: grab;
+}
+.move-handle:active {
+  cursor: grabbing;
+}
+.list-control {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 10px;
+}

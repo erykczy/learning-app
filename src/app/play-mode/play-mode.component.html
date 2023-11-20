@@ -1,0 +1,24 @@
+<h2 class="display-7 text-muted">Play mode</h2>
+<hr class="mb-2 mt-4">
+
+<div *ngIf="isDone()">
+  <h3 class="display-4 victory-text">You won!</h3>
+</div>
+
+<div *ngIf="!isDone()">
+  <h3 class="display-4 concept">{{getCurrentConcept()?.key}}</h3>
+  <input *ngIf="isAnswering()" appCustomLetters class="form-control" placeholder="Answer" [(ngModel)]="input">
+  <p *ngIf="shouldShowIncorrect()" class="incorrect ps-2">&#8203;{{input}}</p>
+  <p *ngIf="shouldShowCorrect()" class="correct ps-2">{{outCorrectAnswer}}</p>
+  <button *ngIf="shouldShowIncorrect()" class="btn btn-outline-success mt-2" (click)="onAcceptAnswer()">Accept Answer</button>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-primary text-center btn-lg shadow mt-4" (click)="next()">{{ isDone() ? 'Reset' : 'Next' }}</button>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-outline-secondary mt-2" routerLink="/editor"><i class="bi bi-box-arrow-up-left"></i> Edit</button>
