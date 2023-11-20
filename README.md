@@ -1,4 +1,7 @@
 # LearningApp
+dont ask:
+Angular CLI: 16.2.9
+Node: 18.10.0
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 
